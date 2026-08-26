@@ -1,0 +1,247 @@
+/* إعدادات عامة */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Tajawal', sans-serif;
+}
+
+body {
+    /* خلفية متدرجة عصرية بألوان مريحة وراقية */
+    background: linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%);
+    background-image: 
+        radial-gradient(at 0% 0%, rgba(37, 99, 235, 0.1) 0px, transparent 50%),
+        radial-gradient(at 100% 0%, rgba(16, 185, 129, 0.15) 0px, transparent 50%),
+        radial-gradient(at 100% 100%, rgba(139, 92, 246, 0.1) 0px, transparent 50%);
+    background-size: cover;
+    background-attachment: fixed;
+    color: #1e293b;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* الحاوية الرئيسية (تأثير الزجاج الحديث) */
+.main-container {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(25px);
+    -webkit-backdrop-filter: blur(25px);
+    width: 100%;
+    max-width: 460px;
+    padding: 35px 25px;
+    border-radius: 35px;
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08), 
+                inset 0 0 0 1px rgba(255, 255, 255, 0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+/* تنسيق صورة الواجهة (تم تحويلها إلى أيقونة احترافية) */
+.hero-image-container {
+    width: 130px; /* عرض الأيقونة */
+    height: 130px; /* ارتفاع الأيقونة لتكون مربعة */
+    margin: 0 auto 20px auto; /* توسيط الأيقونة */
+    border-radius: 30px; /* حواف دائرية تشبه أيقونات الايفون */
+    overflow: hidden;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+    border: 4px solid #ffffff; /* إطار أبيض ناعم */
+    position: relative;
+    background-color: #ffffff;
+    flex-shrink: 0;
+}
+
+.hero-image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* لمنع تشوه الصورة */
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.hero-image-container:hover img {
+    transform: scale(1.1); /* تأثير تكبير خفيف عند اللمس أو مرور الماوس */
+}
+
+/* النصوص */
+.app-title {
+    font-size: 34px;
+    font-weight: 900;
+    margin-bottom: 8px;
+    background: linear-gradient(135deg, #1e293b, #334155);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: -0.5px;
+}
+
+.app-description {
+    font-size: 17px;
+    font-weight: 500;
+    color: #64748b;
+    margin-bottom: 30px;
+}
+
+/* حاوية الأزرار */
+.buttons-container {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 100%;
+    margin-bottom: 25px;
+}
+
+/* التنسيق المشترك لأزرار التحميل */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 16px 20px;
+    border-radius: 20px;
+    font-size: 17px;
+    font-weight: 700;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    width: 100%;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn:active {
+    transform: scale(0.97);
+}
+
+.btn i { font-size: 24px; }
+
+/* زر الأندرويد */
+.android-btn {
+    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+    box-shadow: 0 10px 20px rgba(16, 185, 129, 0.25);
+}
+.android-btn:hover {
+    box-shadow: 0 15px 25px rgba(16, 185, 129, 0.35);
+    transform: translateY(-3px);
+}
+
+/* زر الآيفون والويندوز */
+.ios-btn {
+    background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+    box-shadow: 0 10px 20px rgba(59, 130, 246, 0.25);
+}
+.ios-btn:hover {
+    box-shadow: 0 15px 25px rgba(59, 130, 246, 0.35);
+    transform: translateY(-3px);
+}
+
+/* زر ملاحظة الواتساب */
+.whatsapp-note {
+    background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+    box-shadow: 0 10px 20px rgba(37, 211, 102, 0.25);
+    border-radius: 20px;
+    padding: 14px 18px;
+    text-align: right;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+    color: #ffffff;
+    transition: all 0.3s ease;
+}
+
+.whatsapp-note:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 25px rgba(37, 211, 102, 0.35);
+}
+
+.whatsapp-note i {
+    font-size: 32px;
+    background: rgba(255,255,255,0.2);
+    padding: 10px;
+    border-radius: 50%;
+}
+
+.whatsapp-text h4 {
+    font-size: 15px;
+    font-weight: 700;
+    margin-bottom: 2px;
+}
+.whatsapp-text p {
+    font-size: 13px;
+    font-weight: 500;
+    opacity: 0.9;
+}
+
+/* الفوتر وحسابات التواصل */
+footer {
+    width: 100%;
+    margin-top: 35px;
+    padding-top: 25px;
+    border-top: 1px solid rgba(148, 163, 184, 0.3); 
+}
+
+.social-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    gap: 10px;
+    text-decoration: none;
+    color: #334155;
+    font-size: 15px;
+    font-weight: 700;
+    transition: all 0.3s ease;
+    padding: 12px;
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(226, 232, 240, 0.8);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+}
+
+.social-link:hover {
+    transform: translateY(-3px);
+    background: #ffffff;
+    box-shadow: 0 8px 15px rgba(0,0,0,0.05);
+}
+
+.instagram i { color: #e1306c; font-size: 22px; }
+.facebook i { color: #1877f2; font-size: 22px; }
+
+/* استعلامات الوسائط للهواتف الذكية */
+@media (max-width: 480px) {
+    .main-container {
+        padding: 25px 20px;
+        border-radius: 25px;
+    }
+    
+    /* تصغير الأيقونة قليلاً في شاشات الموبايل */
+    .hero-image-container {
+        width: 110px;
+        height: 110px;
+    }
+    
+    .app-title { font-size: 30px; }
+    .btn {
+        font-size: 15px;
+        padding: 14px;
+    }
+    .whatsapp-note i { font-size: 28px; }
+    .whatsapp-text h4 { font-size: 14px; }
+    .whatsapp-text p { font-size: 12px; }
+    .social-container { flex-direction: column; }
+    .social-link { width: 100%; }
+}
